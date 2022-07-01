@@ -14,7 +14,7 @@ pipeline {
             }
         }
         
-        stage("hello") {
+        stage("Execute hello") {
             steps {
                 script {
                     gv.hello()
