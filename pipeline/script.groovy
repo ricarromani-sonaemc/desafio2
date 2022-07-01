@@ -1,3 +1,0 @@
-def hello() {
-    echo 'hello ...'
-}
