@@ -14,10 +14,10 @@ pipeline {
             }
         }
         
-        stage("hello-world") {
+        stage("hello") {
             steps {
                 script {
-                    gv.hello-world()
+                    gv.hello()
                 }
 
             }
