@@ -1,4 +1,5 @@
 def gv
+def objYaml
 
 pipeline {
     agent any
@@ -9,6 +10,9 @@ pipeline {
             steps {
                 script {
                    gv = load "pipeline/script.groovy" 
+                   ymlObj = readYaml(file: "yaml-families/family.yaml")
+                    
+}
                    
                 }
             }
@@ -22,5 +26,17 @@ pipeline {
 
             }
         }
+        stage("testing readYaml ") {
+            steps {
+                script {
+                    families = ymlObj[families]
+
+                    families.each { e ->
+                                    echo "Translating ${e.getAt('family')}"
+                }
+
+            }
+        }
     }   
+
 }
