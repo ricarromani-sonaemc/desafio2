@@ -6,6 +6,7 @@ pipeline {
 
     stages {
         
+        /*
         stage("init") {
             steps {
                 script {
@@ -26,15 +27,19 @@ pipeline {
 
             }
         }
+        */
 
         stage("Testing readYaml") {
             steps {
                 script {
                     ymlObj = readYaml file: "yaml-families/family.yaml" 
+                    echo "${ymlObj}"
+                    /*
                     families = ymlObj[families]
                     families.each { e ->
                         echo "Translating ${e.getAt('family')}"
                     }
+                    */
                 }
 
             }
