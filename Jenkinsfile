@@ -27,18 +27,7 @@ pipeline {
             }
         }
 
-        stage("Testing readYaml") {
-            steps {
-                script {
-                    families = ymlObj[families]
 
-                    families.each { e ->
-                        echo "Translating ${e.getAt('family')}"
-                    }
-                }
-
-            }
-        }
 
     }
 }
