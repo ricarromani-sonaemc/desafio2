@@ -1,21 +1,16 @@
-def call(String name = 'human') {
-    def gv
-    def objYaml
+def call(String name) {
 
     pipeline {
-        agent any
-
+        agent none
         stages {
-
-            stage("Testing readYaml") {
+            stage ('Example') {
                 steps {
-                    script {
-                        echo 'hellooooo'
+                    // log.info 'Starting' 
+                    script { 
+                        echo 'example'
                     }
-
                 }
             }
-
         }
     }
 }
