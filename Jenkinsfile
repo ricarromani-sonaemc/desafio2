@@ -12,11 +12,11 @@ pipeline {
                    gv = load "pipeline/script.groovy" 
                    //ymlObj = readYaml(file: "yaml-families/family.yaml")
                     
-}
-                   
                 }
+                   
             }
         }
+        
         
         stage("Execute hello") {
             steps {
@@ -26,6 +26,7 @@ pipeline {
 
             }
         }
+    }
   
 
 }
