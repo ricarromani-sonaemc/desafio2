@@ -6,7 +6,7 @@ pipeline {
 
     stages {
         
-        /*
+        
         stage("init") {
             steps {
                 script {
@@ -27,7 +27,7 @@ pipeline {
 
             }
         }
-        */
+        
 
         stage("Testing readYaml") {
             steps {
