@@ -10,7 +10,7 @@ pipeline {
             steps {
                 script {
                    gv = load "pipeline/script.groovy" 
-                   ymlObj = readYaml(file: "yaml-families/family.yaml")
+                   //ymlObj = readYaml(file: "yaml-families/family.yaml")
                     
 }
                    
