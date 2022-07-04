@@ -34,6 +34,7 @@ pipeline {
                 script {
                     ymlObj = readYaml file: "yaml-families/family.yaml" 
                     echo "${ymlObj}"
+                    echo "${ymlObj.getClass()}
                     /*
                     families = ymlObj[families]
                     families.each { e ->
