@@ -10,7 +10,7 @@ pipeline {
             steps {
                 script {
                    gv = load "pipeline/script.groovy" 
-                   //ymlObj = readYaml(file: "yaml-families/family.yaml")
+                   ymlObj = readYaml(file: "yaml-families/family.yaml")
                     
                 }
                    
@@ -26,7 +26,19 @@ pipeline {
 
             }
         }
-    }
-  
 
+        stage("Testing readYaml") {
+            steps {
+                script {
+                    families = ymlObj[families]
+
+                    families.each { e ->
+                        echo "Translating ${e.getAt('family')}"
+                    }
+                }
+
+            }
+        }
+
+    }
 }
