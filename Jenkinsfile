@@ -1,3 +1,3 @@
 // Jenkinsfile
 @Library('desafio2') _
-desafio{}
+desafio(currentBuild.getNumber())
