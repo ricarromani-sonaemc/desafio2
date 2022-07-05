@@ -11,6 +11,9 @@ def call(body) {
                             echo "${ymlObj}"
                             echo "${ymlObj.getClass()}"
                             break
+                            
+                        default:
+                        error('Unexpected branch name')
                     }
                 }
             }
