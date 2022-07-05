@@ -7,20 +7,12 @@ def call(body) {
         stages {
             stage('readYaml') {
                 steps {
-                    sh 'printenv'
-                    echo "${env.BRANCH_NAME}"
-                    /*
-                    switch(env.BRANCH_NAME) {
-                        case 'yaml':
-                            ymlObj = readYaml file: "yaml-families/family.yaml" 
-                            echo "${ymlObj}"
-                            echo "${ymlObj.getClass()}"
-                            break
+                        checkout yaml
 
-                        default:
-                        error('Unexpected branch name')
+                        ymlObj = readYaml file: "yaml-families/family.yaml" 
+                        echo "${ymlObj}"
+                        echo "${ymlObj.getClass()}"
                     }
-                    */
                 }
             }
         }
