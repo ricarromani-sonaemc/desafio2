@@ -1,13 +1,14 @@
 def call(body) {
 
-    def branch = env.BRANCH_NAME 
+    //def branch = env.BRANCH_NAME 
 
     pipeline {
         agent any
         stages {
             stage('readYaml') {
                 steps {
-                    echo "$branch"
+                    sh 'printenv'
+                    echo "${env.BRANCH_NAME}"
                     /*
                     switch(env.BRANCH_NAME) {
                         case 'yaml':
