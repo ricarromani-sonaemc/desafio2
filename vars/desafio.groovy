@@ -6,11 +6,10 @@ def call(body) {
     pipeline {
         agent any
         stages {
-            stage('Checkout SCM') {
-                git branch: 'yaml'
-            }
+
             stage('readYaml') {
                 steps {
+                        checkout yaml
                         ymlObj = readYaml file: "yaml-families/family.yaml" 
                         echo "${ymlObj}"
                         echo "${ymlObj.getClass()}"
