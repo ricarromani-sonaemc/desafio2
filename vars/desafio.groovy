@@ -2,9 +2,9 @@ def call(body) {
     pipeline {
         agent any
         stages {
-            stage('Even Stage') {
+            stage('Hello world') {
                 steps {
-                    echo "The build number is even"
+                    echo "hello"
                 }
             }
         }
