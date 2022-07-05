@@ -5,7 +5,7 @@ def call(body) {
             stage('readYaml') {
                 steps {
                     script {
-                        ymlObj = readYaml file: "../yaml-families/family.yaml" 
+                        ymlObj = readYaml file: "family.yaml" 
                         echo "${ymlObj}"
                         echo "${ymlObj.getClass()}"
                     }
