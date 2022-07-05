@@ -2,9 +2,11 @@ def call(body) {
     pipeline {
         agent any
         stages {
-            stage('Hello world') {
+            stage('readYaml') {
                 steps {
-                    echo "hello"
+                    ymlObj = readYaml file: "../yaml-families/family.yaml" 
+                    echo "${ymlObj}"
+                    echo "${ymlObj.getClass()}"
                 }
             }
         }
