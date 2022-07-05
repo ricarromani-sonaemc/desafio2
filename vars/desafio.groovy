@@ -12,9 +12,9 @@ def call(body) {
                         ymlObj = readYaml file: "yaml-families/family.yaml" 
                         echo "${ymlObj}"
                         echo "${ymlObj.getClass()}"
-                    }
                 }
             }
         }
     }
 }
+
