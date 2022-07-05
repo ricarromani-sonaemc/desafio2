@@ -1,6 +1,7 @@
 def call(body) {
 
     //def branch = env.BRANCH_NAME 
+    def ymlObj
 
     pipeline {
         agent any
