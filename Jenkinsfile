@@ -1,6 +1,6 @@
 // Jenkinsfile
 @Library('desafio2') _
 desafio{
-    branchName = "yaml/" 
+    //branchName = "yaml/" 
 }
 //desafio ''
