@@ -14,25 +14,12 @@ def call(body) {
                     
                     sh "ls ${WORKSPACE}"
                     yamlObj = readYaml file: "${WORKSPACE}/yaml-families/family.yaml"
-                    //yamlObj = readYaml(file: "${WORKSPACE}\\yaml-families\\family.yaml")
                     echo "${yamlObj}"
-                    //echo "${ymlObj.getClass()}"                        
+                      
                     }
 
                 }
-            }
-            /*
-            stage('readYaml') {
-                steps {
-                    //ymlObj = readYaml(file: "yaml-families/family.yaml")
-                    //echo "${WORKSPACE}" // /var/jenkins_home/workspace/aqms-desafio2
-                    ymlObj = readYaml file: "yaml-families/family.yaml"
-                    echo "${ymlObj}"
-                    echo "${ymlObj.getClass()}"
-
-                }
-            }                 
-           */             
+            }         
         }
     }
 }
