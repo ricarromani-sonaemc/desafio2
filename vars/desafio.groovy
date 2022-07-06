@@ -15,10 +15,10 @@ def call(body) {
 
             stage('readYaml') {
                 steps {
-                    echo "${WORKSPACE}" // /var/jenkins_home/workspace/aqms-desafio2
-                    //ymlObj = readYaml file: "yaml-families/family.yaml"
-                    //echo "${ymlObj}"
-                    //echo "${ymlObj.getClass()}"
+                    //echo "${WORKSPACE}" // /var/jenkins_home/workspace/aqms-desafio2
+                    ymlObj = readYaml file: "yaml-families/family.yaml"
+                    echo "${ymlObj}"
+                    echo "${ymlObj.getClass()}"
 
                 }
             }                    
