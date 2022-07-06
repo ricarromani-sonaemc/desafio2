@@ -15,7 +15,7 @@ def call(body) {
                     sh "ls ${WORKSPACE}"
                     yamlObj = readYaml file: "${WORKSPACE}/yaml-families/family.yaml"
                     //yamlObj = readYaml(file: "${WORKSPACE}\\yaml-families\\family.yaml")
-                    echo "${ymlObj}"
+                    echo "${yamlObj}"
                     //echo "${ymlObj.getClass()}"                        
                     }
 
