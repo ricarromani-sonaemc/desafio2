@@ -15,9 +15,9 @@ def call(body) {
             */
             stage('readYaml') {
                 steps {
-                    ymlObj = readYaml(file: "yaml-families/family.yaml")
+                    //ymlObj = readYaml(file: "yaml-families/family.yaml")
                     //echo "${WORKSPACE}" // /var/jenkins_home/workspace/aqms-desafio2
-                    //ymlObj = readYaml file: "yaml-families/family.yaml"
+                    ymlObj = readYaml file: "yaml-families/family.yaml"
                     echo "${ymlObj}"
                     echo "${ymlObj.getClass()}"
 
