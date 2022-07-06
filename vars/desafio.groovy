@@ -13,7 +13,7 @@ def call(body) {
                 }
             }
             
-            /*stage('readYaml') {
+            stage('readYaml') {
                 steps {
                     //ymlObj = readYaml(file: "yaml-families/family.yaml")
                     //echo "${WORKSPACE}" // /var/jenkins_home/workspace/aqms-desafio2
@@ -22,7 +22,7 @@ def call(body) {
                     echo "${ymlObj.getClass()}"
 
                 }
-            }        */            
+            }                 
                         
         }
     }
