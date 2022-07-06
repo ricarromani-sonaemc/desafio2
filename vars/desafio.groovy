@@ -16,7 +16,7 @@ def call(body) {
                     echo "${ymlObj.getClass()}"
                 }
             }
-            
+            /*
             stage('readYaml') {
                 steps {
                     //ymlObj = readYaml(file: "yaml-families/family.yaml")
@@ -27,7 +27,7 @@ def call(body) {
 
                 }
             }                 
-                        
+           */             
         }
     }
 }
