@@ -1,11 +1,11 @@
 package pipeline
 
-public class Member {
+public class Member implements Serializable{
     private String firstName;
     private String lastName;
     private Integer age;
     private String job;
-    
+
     public String getFirstName() {
         return firstName;
     }

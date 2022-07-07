@@ -1,8 +1,8 @@
 package pipeline
 
-public class Families {
+public class Families implements Serializable{
     private List<Family> family;
-    
+
     public List<Family> getFamily() {
         return family;
     }

@@ -1,10 +1,10 @@
 package pipeline
 
-public class Family {
+public class Family implements Serializable{
 
     private String name;
     private List<Member> members;
-    
+
     public String getName() {
         return name;
     }
