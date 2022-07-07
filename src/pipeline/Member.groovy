@@ -24,6 +24,10 @@ public class Member implements Serializable{
     public void setJob(String job) {
         this.job = job;
     }
+
+    public String ToString() {
+        return "firstName = " + this.firstName + "/nlastName = " + this.lastName + "/njob = " + this.job; 
+    }
 }
 
 /*

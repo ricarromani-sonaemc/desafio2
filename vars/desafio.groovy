@@ -46,7 +46,7 @@ def call(body) {
                         member.setJob(yamlObj.job);
                         
 
-                        echo "${member}"
+                        echo "${member.ToString()}"
 
                     }
                 }
