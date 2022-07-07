@@ -1,13 +1,4 @@
-members:
-      - firstName: "Pedro"
-        lastName: "Gomes"  
-        age: 55
-        job: "Professor"
-      - firstName: "Maria"
-        lastName: "Gomes"  
-        age: 52
-        job: "Professora"
-      - firstName: "Jorge"
-        lastName: "Gomes"  
-        age: 12
-        job: "Estudante"
+firstName: "Pedro"
+lastName: "Gomes"  
+age: 55
+job: "Professor"
