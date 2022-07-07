@@ -3,7 +3,7 @@ package pipeline
 public class Member implements Serializable{
     private String firstName;
     private String lastName;
-    private Integer age;
+    private Integer idade;
     private String job;
 
     public String getFirstName() {
@@ -18,11 +18,11 @@ public class Member implements Serializable{
     public void setLastName(String lastName) {
         this.lastName = lastName;
     }
-    public Integer getAge() {
-        return age;
+    public Integer getIdade() {
+        return idade;
     }
-    public void setAge(Integer age) {
-        this.age = age;
+    public void setIdade(Integer idade) {
+        this.idade = idade;
     }
     public String getJob() {
         return job;
