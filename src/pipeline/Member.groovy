@@ -26,7 +26,7 @@ public class Member implements Serializable{
     }
 
     public String ToString() {
-        return "firstName = " + this.firstName + "/nlastName = " + this.lastName + "/njob = " + this.job; 
+        return "firstName = " + this.firstName + "\nlastName = " + this.lastName + "\njob = " + this.job; 
     }
 }
 
