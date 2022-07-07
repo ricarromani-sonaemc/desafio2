@@ -42,6 +42,12 @@ def call(body) {
                         member.firstName = yamlObj.firstName
                         member.lastName = yamlObj.lastName
                         member.job = yamlObj.job
+
+                        for (int i = 0; i < yamlObj.families.size(); i++) {
+                            for(int f = 0; f < yamlObj.families[i].size(); f++) {
+                                echo "${yamlObj.families[i].members[f].firstName}"
+                            }
+                        }
                     
                         //echo "${member.ToString()}"
                         //echo "${member.firstName}"
