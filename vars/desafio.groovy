@@ -25,7 +25,7 @@ def call(body) {
                         sh "ls ${WORKSPACE}"
                         yamlObj = readYaml file: "${WORKSPACE}/yaml-families/family.yaml"
                         echo "${yamlObj}"            
-                    }
+                    }   
                 }
             }
 
@@ -34,8 +34,8 @@ def call(body) {
                     script {
                             File file = new File("${WORKSPACE}/yaml-families/family.yaml");    
                             ObjectMapper objectMapper = new ObjectMapper(new YAMLFactory());
-                            Member member = objectMapper.readValue(file, Member.class);
-                            System.out.println("Application config info " + member.toString());
+                            Families families = objectMapper.readValue(file, Families.class);
+                            System.out.println("Application config info " + families.toString());
                     }
                 }
             }
