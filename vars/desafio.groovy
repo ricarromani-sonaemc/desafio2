@@ -52,7 +52,7 @@ def call(body) {
                             for(int f = 0; f < yamlObj.families[i].family[0].members.size(); f++) {
                                 
                                 echo "${yamlObj.families[i].family[0].members[f]}"
-                                echo "${families[i]}"
+                                echo "${families}"
 
                                 Member member = new Member()
                                 member.firstName = yamlObj.families[i].family[0].members[f].firstName
