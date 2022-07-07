@@ -1,7 +1,17 @@
+import groovy.yaml.YamlSlurper
+import java.io.File
+
+import pipeline.Families
+import pipeline.Family
+import pipeline.Member
+
+
 def call(body) {
 
     //def branch = env.BRANCH_NAME 
     def yamlObj
+
+
 
     pipeline {
         agent any
@@ -16,7 +26,14 @@ def call(body) {
                     yamlObj = readYaml file: "${WORKSPACE}/yaml-families/family.yaml"
                     echo "${yamlObj}"            
                     }
+                }
+            }
 
+            stage('conver yaml to object') {
+                steps {
+                    script {
+                        
+                    }
                 }
             }         
         }
