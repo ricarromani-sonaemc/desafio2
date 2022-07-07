@@ -1,9 +1,9 @@
 package pipeline
 
 public class Member implements Serializable{
-    String firstName;
-    String lastName;
-    String job;
+    String firstName
+    String lastName
+    String job
 
     Member() {
         this.firstName = ""
@@ -29,30 +29,13 @@ public class Member implements Serializable{
     }
     public void setJob(String job) {
         this.job = job;
-    }
+    }*/
     
     public String ToString() {
         return "firstName = " + this.firstName + "\nlastName = " + this.lastName + "\njob = " + this.job; 
-    }
-    */
+    } 
 }
 
-/*
-class Member extends Serializable {
-
-    String firstName;
-    String lastName;
-    long age;
-    String job;
-    
-    Member(){
-        this.firstName = ""
-        this.lastName = ""
-        this.age
-        this.job = ""
-    }
-}
-*/
 /*
 public class Member {
     private String firstName

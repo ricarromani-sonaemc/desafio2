@@ -3,11 +3,8 @@ package pipeline
 public class Families implements Serializable{
     private List<Family> family;
 
-    public List<Family> getFamily() {
-        return family;
-    }
-    public void setFamily(List<Family> family) {
-        this.family = family;
+    families(){
+        this.family = []
     }
 }
 

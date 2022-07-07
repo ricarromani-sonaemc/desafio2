@@ -5,6 +5,11 @@ public class Family implements Serializable{
     private String name;
     private List<Member> members;
 
+    FamilyObject() {
+        this.name = ""
+        this.members = []
+    }
+
     public String getName() {
         return name;
     }

@@ -38,15 +38,15 @@ def call(body) {
                         //mapper.findAndRegisterModules();/*
                         //Member member = mapper.readValue(new File("resources/member.yaml"), Member.class);
                         
-                        Member member = new Member();
-                        member.firstName = yamlObj.firstName;
-                        member.lastName = yamlObj.lastName;
-                        member.job = yamlObj.job;
+                        Member member = new Member()
+                        member.firstName = yamlObj.firstName
+                        member.lastName = yamlObj.lastName
+                        member.job = yamlObj.job
                     
                         //echo "${member.ToString()}"
-                        echo "${member.firstName}"
-                        echo "${member.lastName}"
-                        echo "${member.job}"
+                        //echo "${member.firstName}"
+                        //echo "${member.lastName}"
+                        //echo "${member.job}"
 
                     }
                 }
