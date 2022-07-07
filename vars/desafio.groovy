@@ -43,6 +43,8 @@ def call(body) {
                         mapper.findAndRegisterModules();
                         Member member = mapper.readValue(new File("resources/member.yaml"), Member.class);*/
                         Member member = new Member();
+                        member.setJob(yamlObj.firstName);
+                        member.setJob(yamlObj.lastName);
                         member.setJob(yamlObj.job);
                         
 
