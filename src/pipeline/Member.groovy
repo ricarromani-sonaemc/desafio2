@@ -5,6 +5,12 @@ public class Member implements Serializable{
     private String lastName;
     private String job;
 
+    Member() {
+        this.firstName = ""
+        this.lastName = ""
+        this.job = ""
+    }
+/*
     public String getFirstName() {
         return firstName;
     }
@@ -28,6 +34,7 @@ public class Member implements Serializable{
     public String ToString() {
         return "firstName = " + this.firstName + "\nlastName = " + this.lastName + "\njob = " + this.job; 
     }
+    */
 }
 
 /*

@@ -1,11 +1,3 @@
-import java.io.*
-import java.util.*
-@Grab('com.fasterxml.jackson.dataformat:jackson-dataformat-yaml:2.13.0')
-import com.fasterxml.jackson.databind.ObjectMapper;
-@Grab('com.fasterxml.jackson.datatype:jackson-datatype-jsr310:2.13.0')
-import com.fasterxml.jackson.dataformat.yaml.YAMLFactory;
-import dependencies.*
-
 import pipeline.Families
 import pipeline.Family
 import pipeline.Member
@@ -42,16 +34,15 @@ def call(body) {
                 steps {
                     script {
                         
-                        mapper = new ObjectMapper(new YAMLFactory());
-                        mapper.findAndRegisterModules();/*
-                        Member member = mapper.readValue(new File("resources/member.yaml"), Member.class);
-                        */
-                        Member member = new Member();
-                        member.setFirstName(yamlObj.firstName);
-                        member.setLastName(yamlObj.lastName);
-                        member.setJob(yamlObj.job);
+                       //mapper = new ObjectMapper(new YAMLFactory());
+                        //mapper.findAndRegisterModules();/*
+                        //Member member = mapper.readValue(new File("resources/member.yaml"), Member.class);
                         
-
+                        Member member = new Member();
+                        member.firstName = yamlObj.firstName;
+                        member.lastName = yamlObj.lastName;
+                        member.job = yamlObj.job;
+                    
                         echo "${member.ToString()}"
 
                     }
