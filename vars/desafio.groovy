@@ -32,6 +32,7 @@ def call(body) {
             stage('convert yaml to object') {
                 steps {
                     script {
+                            yamlObj = readYaml file: "${WORKSPACE}/yaml-families/family.yaml"
                             File file = new File(yamlObj);    
                             ObjectMapper objectMapper = new ObjectMapper(new YAMLFactory());
                             Families families = objectMapper.readValue(file, Families.class);
