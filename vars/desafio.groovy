@@ -58,12 +58,12 @@ def call(body) {
                                 member.lastName = yamlObj.families[i].family[0].members[f].lastName
                                 member.job = yamlObj.families[i].family[0].members[f].job
                                 member.age = yamlObj.families[i].family[0].members[f].age
-                                families[i].members.add(member)
+                                families[i].family[0].members.add(member)
                                 
                             }
                         }
 
-                        
+
                     
                         //echo "${member.ToString()}"
                         //echo "${member.firstName}"
