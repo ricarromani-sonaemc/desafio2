@@ -24,7 +24,7 @@ def call(body) {
                         
                         //sh "ls ${WORKSPACE}"
                         //yamlObj = readYaml file: "${WORKSPACE}/yaml-families/family.yaml"
-                        yamlObj = readYaml file: "/resources/member.yaml"
+                        yamlObj = readYaml file: "member.yaml"
                         echo "${yamlObj}" 
                                
                     }   
