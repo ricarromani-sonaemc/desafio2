@@ -5,7 +5,7 @@ public class Family implements Serializable{
     private String name;
     private List<Member> members;
 
-    FamilyObject() {
+    Family() {
         this.name = ""
         this.members = []
     }
