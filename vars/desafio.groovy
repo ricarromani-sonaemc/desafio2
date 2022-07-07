@@ -32,11 +32,10 @@ def call(body) {
             stage('convert yaml to object') {
                 steps {
                     script {
-                        InputStream inputStream = new FileInputStream(new File("resources/member.yaml"));
-                        Yaml yaml = new Yaml(new Constructor(Member.groovy));
-                        Student data = yaml.load(inputStream);
-                        System.out.println(data);
-
+                            mapper = new ObjectMapper(new YAMLFactory())
+                            mapper.findAndRegisterModules()
+                            Member member = mapper.readValue(new File("resource/member.yaml"), Member.groovy)
+                            echo "${member}"
 
                     }
                 }
