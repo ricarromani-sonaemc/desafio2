@@ -1,7 +1,10 @@
 import java.io.*
 import java.util.*
+@Grab('com.fasterxml.jackson.dataformat:jackson-dataformat-yaml:2.13.0')
 import com.fasterxml.jackson.databind.ObjectMapper;
+@Grab('com.fasterxml.jackson.datatype:jackson-datatype-jsr310:2.13.0')
 import com.fasterxml.jackson.dataformat.yaml.YAMLFactory;
+import dependencies.*
 
 import pipeline.Families
 import pipeline.Family
