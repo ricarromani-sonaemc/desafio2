@@ -32,7 +32,7 @@ def call(body) {
             stage('convert yaml to object') {
                 steps {
                     script {
-                            File file = new File("${WORKSPACE}/yaml-families/family.yaml");    
+                            File file = new File(yamlObj);    
                             ObjectMapper objectMapper = new ObjectMapper(new YAMLFactory());
                             Families families = objectMapper.readValue(file, Families.class);
                             System.out.println("Application config info " + families.toString());
