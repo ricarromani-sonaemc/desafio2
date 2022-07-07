@@ -38,19 +38,32 @@ def call(body) {
                         //mapper.findAndRegisterModules();/*
                         //Member member = mapper.readValue(new File("resources/member.yaml"), Member.class);
                         
-                        Member member = new Member()
-                        member.firstName = yamlObj.firstName
-                        member.lastName = yamlObj.lastName
-                        member.job = yamlObj.job
-                        
+                        Families families = new Families()                        
                         
                         echo "numero de familias = ${yamlObj.families.size()}"
                         for (int i = 0; i < yamlObj.families.size(); i++) {
+
+                            Family family = new Family()
+                            family.name = yamlObj.families[i].family[0].name
+                            families.family.add(family)
+
                             echo "A familia ${yamlObj.families[i].family[0].name} é constituida por ${yamlObj.families[i].family[0].members.size()} membros."
+
                             for(int f = 0; f < yamlObj.families[i].family[0].members.size(); f++) {
+                                
                                 echo "${yamlObj.families[i].family[0].members[f]}"
+
+                                Member member = new Member()
+                                member.firstName = yamlObj.families[i].family[0].members[f].firstName
+                                member.lastName = yamlObj.families[i].family[0].members[f].lastName
+                                member.job = yamlObj.families[i].family[0].members[f].job
+                                member.age = yamlObj.families[i].family[0].members[f].age
+                                families[i].members.add(member)
+                                
                             }
                         }
+
+                        
                     
                         //echo "${member.ToString()}"
                         //echo "${member.firstName}"

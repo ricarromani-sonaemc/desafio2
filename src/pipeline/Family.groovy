@@ -9,7 +9,7 @@ public class Family implements Serializable{
         this.name = ""
         this.members = []
     }
-
+/*
     public String getName() {
         return name;
     }
@@ -21,7 +21,7 @@ public class Family implements Serializable{
     }
     public void setMembers(List<Member> members) {
         this.members = members;
-    }
+    }*/
 }
 
 /*

@@ -4,11 +4,13 @@ public class Member implements Serializable{
     String firstName
     String lastName
     String job
+    Integer age
 
     Member() {
         this.firstName = ""
         this.lastName = ""
         this.job = ""
+        this.age = 0
     }
 /*
     public String getFirstName() {
