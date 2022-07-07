@@ -34,9 +34,9 @@ def call(body) {
             stage('convert yaml to object') {
                 steps {
                     script {
-                        Member member = new Member(new File("resources/member.yaml"));
+                        InputStream inputStream = new InputStream(new File("resources/member.yaml"));
                         Yaml yaml = new Yaml(new Constructor(Member.class));
-                        Member data = yaml.load(member);
+                        Member data = yaml.load(inputStream);
                         System.out.println(data);
 
                     }
