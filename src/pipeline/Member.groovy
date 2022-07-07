@@ -1,6 +1,6 @@
 package pipeline
 
-public class Member {
+public class Member implements Serializable{
     private String firstName;
     private String lastName;
     private String job;

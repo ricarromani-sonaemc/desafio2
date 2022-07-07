@@ -5,13 +5,16 @@ import com.fasterxml.jackson.dataformat.yaml.YAMLFactory;
 
 import pipeline.Families
 import pipeline.Family
-import pipeline.Member
+
+
 
 
 def call(body) {
 
     //def branch = env.BRANCH_NAME 
     def yamlObj
+
+    def member2 = new Member()
 
     pipeline {
         agent any
@@ -48,4 +51,31 @@ def call(body) {
     }         
 }
 
+
+@NonCPS
+public class Member implements Serializable{
+    private String firstName;
+    private String lastName;
+    private String job;
+
+    public String getFirstName() {
+        return firstName;
+    }
+    public void setFirstName(String firstName) {
+        this.firstName = firstName;
+    }
+    public String getLastName() {
+        return lastName;
+    }
+    public void setLastName(String lastName) {
+        this.lastName = lastName;
+    }
+
+    public String getJob() {
+        return job;
+    }
+    public void setJob(String job) {
+        this.job = job;
+    }
+}
 
