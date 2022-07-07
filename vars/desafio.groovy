@@ -12,7 +12,7 @@ def call(body) {
 
     //def branch = env.BRANCH_NAME 
     def yamlObj
-    def yaml = "${WORKSPACE}/yaml-families/family.yaml"
+    def yaml = ${WORKSPACE}/yaml-families/family.yaml
 
     pipeline {
         agent any
