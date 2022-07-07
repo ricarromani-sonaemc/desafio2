@@ -5,6 +5,7 @@ import com.fasterxml.jackson.dataformat.yaml.YAMLFactory;
 
 import pipeline.Families
 import pipeline.Family
+import pipeline.Member
 
 
 
@@ -14,7 +15,7 @@ def call(body) {
     //def branch = env.BRANCH_NAME 
     def yamlObj
 
-    def member2 = new Member()
+    //def member2 = new Member()
 
     pipeline {
         agent any
