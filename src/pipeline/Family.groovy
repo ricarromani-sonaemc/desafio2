@@ -1,4 +1,24 @@
 package pipeline
+
+public class Family {
+
+    private String name;
+    private List<Member> members;
+    
+    public String getName() {
+        return name;
+    }
+    public void setName(String name) {
+        this.name = name;
+    }
+    public List<Member> getMembers() {
+        return members;
+    }
+    public void setMembers(List<Member> members) {
+        this.members = members;
+    }
+}
+
 /*
 class FamilyObject extends Serializable {
 
@@ -9,7 +29,7 @@ class FamilyObject extends Serializable {
 
 }
 */
-
+/*
 public class Family {
     private String name;
     private Member[] members;
@@ -28,3 +48,4 @@ public class Family {
         this.members = value
     }
 }
+*/

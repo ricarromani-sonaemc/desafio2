@@ -1,4 +1,16 @@
 package pipeline
+
+public class Families {
+    private List<Family> family;
+    
+    public List<Family> getFamily() {
+        return family;
+    }
+    public void setFamily(List<Family> family) {
+        this.family = family;
+    }
+}
+
 /*
 class FamiliesObject extends Serializable {
     
@@ -7,7 +19,7 @@ class FamiliesObject extends Serializable {
     }
 }
 */
-
+/*
 public class Families {
     private Family[] family
 
@@ -18,3 +30,4 @@ public class Families {
         this.family = value
     }
 }
+*/
