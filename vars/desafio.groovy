@@ -43,13 +43,13 @@ def call(body) {
                     script {
                         
                         mapper = new ObjectMapper(new YAMLFactory());
-                        mapper.findAndRegisterModules();
+                        mapper.findAndRegisterModules();/*
                         Member member = mapper.readValue(new File("resources/member.yaml"), Member.class);
-                        /*
+                        */
                         Member member = new Member();
                         member.setFirstName(yamlObj.firstName);
                         member.setLastName(yamlObj.lastName);
-                        member.setJob(yamlObj.job);*/
+                        member.setJob(yamlObj.job);
                         
 
                         echo "${member.ToString()}"
