@@ -30,18 +30,18 @@ def call(body) {
                     }   
                 }
             }
-
+            /*
             stage('convert yaml to object') {
                 steps {
                     script {
-                        InputStream inputStream = new InputStream(new File("resources/member.yaml"));
-                        Yaml yaml = new Yaml(new Constructor(Member.class));
-                        Member data = yaml.load(inputStream);
-                        System.out.println(data);
+                        Member member = new Member(new File("resources/member.yaml"));
+                        Yaml yaml = new Yaml();
+                        yaml.dump(dataMap, member);
 
                     }
                 }
             }
+            */
         }
     }         
 }
