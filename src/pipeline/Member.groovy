@@ -1,5 +1,5 @@
 package pipeline
-/*
+
 public class Member implements Serializable{
     private String firstName;
     private String lastName;
@@ -31,8 +31,8 @@ public class Member implements Serializable{
         this.job = job;
     }
 }
-*/
 
+/*
 class Member extends Serializable {
 
     String firstName;
@@ -47,7 +47,7 @@ class Member extends Serializable {
         this.job = ""
     }
 }
-
+*/
 /*
 public class Member {
     private String firstName
