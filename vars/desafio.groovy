@@ -24,7 +24,7 @@ def call(body) {
                         
                         //sh "ls ${WORKSPACE}"
                         //yamlObj = readYaml file: "${WORKSPACE}/yaml-families/family.yaml"
-                        yamlObj = readYaml file: "member.yaml"
+                        yamlObj = readYaml file: "resources/member.yaml"
                         echo "${yamlObj}" 
                                
                     }   
@@ -36,7 +36,7 @@ def call(body) {
                     script {
                             mapper = new ObjectMapper(new YAMLFactory())
                             mapper.findAndRegisterModules()
-                            Member member = mapper.readValue(new File("resource/member.yaml"), Member.class)
+                            Member member = mapper.readValue(new File("member.yaml"), Member.class)
                             echo "${member}"
 
                     }
