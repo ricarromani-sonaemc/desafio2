@@ -43,7 +43,10 @@ def call(body) {
                         member.lastName = yamlObj.lastName;
                         member.job = yamlObj.job;
                     
-                        echo "${member.ToString()}"
+                        //echo "${member.ToString()}"
+                        echo "${member.firstName}"
+                        echo "${member.lastName}"
+                        echo "${member.job}"
 
                     }
                 }
