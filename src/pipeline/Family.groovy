@@ -10,7 +10,7 @@ class FamilyObject extends Serializable {
 }
 */
 
-public class FamilyFamily {
+public class Family {
     private String name;
     private Member[] members;
 
