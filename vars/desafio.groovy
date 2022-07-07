@@ -30,7 +30,7 @@ def call(body) {
                     }   
                 }
             }
-            
+            /*
             stage('convert yaml to object') {
                 steps {
                     script {
@@ -43,7 +43,7 @@ def call(body) {
                     }
                 }
             }
-            
+            */
         }
     }         
 }
