@@ -34,8 +34,8 @@ def call(body) {
                     script {
                             mapper = new ObjectMapper(new YAMLFactory())
                             mapper.findAndRegisterModules()
-                            Families families = mapper.readValue(new File("${WORKSPACE}/yaml-families/family.yaml"), Families.class)
-                            echo "${families}"
+                            Member member = mapper.readValue(new File("resource/member.yaml"), Member.class)
+                            echo "${member}"
 
                     }
                 }
