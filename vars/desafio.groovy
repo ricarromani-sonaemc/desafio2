@@ -55,13 +55,16 @@ def call(body) {
                                 echo "${families}"
 
                                 Member member = new Member()
-                                member.firstName = "mae"
-                                echo "${member.firstName}"
+                                member.firstName = yamlObj.families[i].family[0].members[f].firstName
                                 member.lastName = yamlObj.families[i].family[0].members[f].lastName
                                 member.job = yamlObj.families[i].family[0].members[f].job
                                 member.age = yamlObj.families[i].family[0].members[f].age
+
+                                echo "${member}"
                                 
                                 families[i].family[0].members.add(member)
+
+                                
                                 
                             }
                         }
