@@ -33,7 +33,7 @@ def call(body) {
                 steps {
                     script {
                         InputStream inputStream = new FileInputStream(new File("resources/member.yml"));
-                        Yaml yaml = new Yaml(new Constructor(Member.groovy));
+                        Yaml yaml = new Yaml(new Constructor(Member.class));
                         Member data = yaml.load(inputStream);
                         System.out.println(data);
 
