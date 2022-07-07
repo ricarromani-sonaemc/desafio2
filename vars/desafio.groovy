@@ -36,7 +36,7 @@ def call(body) {
                     script {
                         Member member = new Member(new File("resources/member.yaml"));
                         Yaml yaml = new Yaml(new Constructor(Member.class));
-                        Student data = yaml.load(member);
+                        Member data = yaml.load(member);
                         System.out.println(data);
 
                     }
