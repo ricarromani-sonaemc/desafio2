@@ -43,7 +43,7 @@ def call(body) {
                         member.lastName = yamlObj.lastName
                         member.job = yamlObj.job
                         
-                        echo ${yamlObj.families.size()}
+                        echo "${yamlObj.families.size()}"
 
                         for (int i = 0; i < yamlObj.families.size(); i++) {
                             for(int f = 0; f < yamlObj.families[i].size(); f++) {
