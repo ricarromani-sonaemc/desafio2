@@ -34,7 +34,7 @@ def call(body) {
                     script {
                             mapper = new ObjectMapper(new YAMLFactory())
                             mapper.findAndRegisterModules()
-                            Member member = mapper.readValue(new File("resource/member.yaml"), Member.groovy)
+                            Member member = mapper.readValue(new File("resource/member.yaml"), Member.class)
                             echo "${member}"
 
                     }
