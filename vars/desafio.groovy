@@ -34,11 +34,11 @@ def call(body) {
             stage('convert yaml to object') {
                 steps {
                     script {
-                        Member members = new FileInputStream(new File("resources/member.yaml"));
-                        Yaml yaml = new Yaml(new Constructor(Member.class));
-                        Member data = yaml.load(members);
-                        System.out.println(data);
-                        
+                        mapper = new ObjectMapper(new YAMLFactory());
+                        mapper.findAndRegisterModules();
+                        Member member = mapper.readValue(new File("resources/member.yaml"), Member.class);
+
+                        echo "${member}"
 
                     }
                 }
