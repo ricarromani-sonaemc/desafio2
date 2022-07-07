@@ -52,13 +52,14 @@ def call(body) {
                             for(int f = 0; f < yamlObj.families[i].family[0].members.size(); f++) {
                                 
                                 echo "${yamlObj.families[i].family[0].members[f]}"
+                                echo "${families[i]}"
 
                                 Member member = new Member()
                                 member.firstName = yamlObj.families[i].family[0].members[f].firstName
                                 member.lastName = yamlObj.families[i].family[0].members[f].lastName
                                 member.job = yamlObj.families[i].family[0].members[f].job
                                 member.age = yamlObj.families[i].family[0].members[f].age
-                                echo "${families[i]}"
+                                
                                 families[i].family[0].members.add(member)
                                 
                             }
