@@ -46,8 +46,8 @@ def call(body) {
                         
                         echo "numero de familias = ${yamlObj.families.size()}"
                         for (int i = 0; i < yamlObj.families.size(); i++) {
-                            echo "numero de membros = ${ yamlObj.families[i].size()}"
-                            for(int f = 0; f < yamlObj.families[i].size(); f++) {
+                            echo "numero de membros = ${yamlObj.families[0].members[i].size()}"
+                            for(int f = 0; f < yamlObj.families[0].members[i].size(); f++) {
                                 echo "${yamlObj.families[i].members[f].firstName}"
                             }
                         }
