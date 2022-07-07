@@ -3,7 +3,7 @@ package pipeline
 public class Families implements Serializable{
     private List<Family> family;
 
-    families(){
+    Families(){
         this.family = []
     }
 }
