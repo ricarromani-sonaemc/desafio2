@@ -35,7 +35,7 @@ def call(body) {
                             File file = new File("${WORKSPACE}/yaml-families/family.yaml");    
                             ObjectMapper objectMapper = new ObjectMapper(new YAMLFactory());
                             Families families = objectMapper.readValue(file, Families.class);
-                            System.out.println("Application config info " + families.toString());
+                            echo "${families}"
                     }
                 }
             }
