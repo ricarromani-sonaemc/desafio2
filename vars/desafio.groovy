@@ -47,12 +47,12 @@ def call(body) {
                                 echo "${yamlObj.families[i].family[0].members[f]}"
 
                                 Member member = new Member()
-                                /*
+                                
                                 member.firstName = yamlObj.families[i].family[0].members[f].firstName
                                 member.lastName = yamlObj.families[i].family[0].members[f].lastName
                                 member.job = yamlObj.families[i].family[0].members[f].job
                                 member.age = yamlObj.families[i].family[0].members[f].age
-
+                                /*
                                 families[i].family[0].members.add(member)
 
                                 //"Olá, o meu nome é X, tenho Z anos e vim da cidade Y. A minha profissão é K."
