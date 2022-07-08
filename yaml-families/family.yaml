@@ -4,7 +4,7 @@ families:
     - name: "Gomes" 
       members:
       - firstName: "Pedro"
-        lastName: "Gomes"  
+        lastName: "ola"  
         age: 55
         job: "Professor"
       - firstName: "Maria"
