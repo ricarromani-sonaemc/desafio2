@@ -52,7 +52,7 @@ def call(body) {
                             echo "A familia ${yamlObj.families[i].family[0].name} é constituida por ${yamlObj.families[i].family[0].members.size()} membros."
 
                             for(int f = 0; f < yamlObj.families[i].family[0].members.size(); f++) {
-                                echo "${n}"
+                               
                                 if( yamlObj.families[i].family[0].name == yamlObj.families[i].family[0].members[f].lastName)
                                     ver[flag] = 1;
                                 else
@@ -90,7 +90,7 @@ def call(body) {
                         echo "A familia ${yamlObj.families[i].family[0].name} é constituida por ${yamlObj.families[i].family[0].members.size()} membros."
 
                         for(int f = 0; f < yamlObj.families[i].family[0].members.size(); f++) {
-                            echo "${n}"
+                         
                             if( ver[sizee] == 1)
                                 echo "${yamlObj.families[i].family[0].members[f]}"
                             else
