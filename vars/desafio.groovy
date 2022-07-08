@@ -33,22 +33,34 @@ def call(body) {
             stage('convert yaml to object') {
                 steps {
                     script {
-
-                        Families families = new Families()
+                        Families families = new Families()                        
+                        
+                        echo "numero de familias = ${yamlObj.families.size()}"
                         for (int i = 0; i < yamlObj.families.size(); i++) {
-                            echo "familias: ${yamlObj.families[i]}"
 
                             Family family = new Family()
-                            for(int f = 0; f < yamlObj.families[i].family.size(); f++) {
-                                echo "familia: ${yamlObj.families[i].family[f]}"
+                            family.name = yamlObj.families[i].family[0].name
+                            families.family.add(family)
 
+                            echo "A familia ${yamlObj.families[i].family[0].name} é constituida por ${yamlObj.families[i].family[0].members.size()} membros."
+
+                            for(int f = 0; f < yamlObj.families[i].family[0].members.size(); f++) {
+                                
+                                echo "${yamlObj.families[i].family[0].members[f]}"
+                                echo "${families}"
+
+                                /*
                                 Member member = new Member()
-                                for(int g = 0; g < yamlObj.families[i].family[0].member.size(); g++) {
-                                    echo "membros: ${yamlObj.families[i].family[f].member[g]}"
+                                member.firstName = yamlObj.families[i].family[0].members[f].firstName
+                                member.lastName = yamlObj.families[i].family[0].members[f].lastName
+                                member.job = yamlObj.families[i].family[0].members[f].job
+                                member.age = yamlObj.families[i].family[0].members[f].age
 
-                                }
-                            }
-                        }
+                                echo "${member}"
+                                
+                                families[i].family[0].members.add(member)
+                                */
+                                
                     }
                 }
             
