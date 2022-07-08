@@ -47,6 +47,9 @@ def call(body) {
                                 echo "${yamlObj.families[i].family[0].members[f]}"
                                 echo "${yamlObj.families[i].family[0].members[f].firstName}"
 
+                                def String nome = yamlObj.families[i].family[0].members[f].firstName
+                                echo "O nome é ${nome}"
+
                                 /*
                                 Member member = new Member()
                                 member.firstName = yamlObj.families[i].family[0].members[f].firstName
