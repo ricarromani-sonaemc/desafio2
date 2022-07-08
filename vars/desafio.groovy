@@ -54,6 +54,8 @@ def call(body) {
                                 member.lastName = yamlObj.families[i].family[0].members[f].lastName
                                 member.job = yamlObj.families[i].family[0].members[f].job
                                 member.age = yamlObj.families[i].family[0].members[f].age
+                                //echo "${member}"
+                                //families[i].family[0].members.add(member)
                                
                                 if(family.name == member.lastName)
                                     ver[flag] = 1
@@ -61,40 +63,36 @@ def call(body) {
                                     ver[flag] = 0
                                 flag++
 
-                                echo "${yamlObj.families[i].family[0].members[f]}"
+                                echo "Membro: ${yamlObj.families[i].family[0].members[f]}"
                                 //echo "${families}"
 
-                                /*
-                                Member member = new Member()
-                                member.firstName = yamlObj.families[i].family[0].members[f].firstName
-                                member.lastName = yamlObj.families[i].family[0].members[f].lastName
-                                member.job = yamlObj.families[i].family[0].members[f].job
-                                member.age = yamlObj.families[i].family[0].members[f].age
-                                echo "${member}"
-                                families[i].family[0].members.add(member)
-                                */  
                                 echo "---------------------------------------------------------------------------------------------"
                             }
                         }
                         echo "${flag}"
                         for( int l =0; l < flag ; l++)
-                            echo "${ver[l]}"
+                            echo "Numero: ${ver[l]}"
 
                         sizee =0
-                        for (int i = 0; i < yamlObj.families.size(); i++) {
-
+                        for (int i = 0; i < yamlObj.families.size(); i++) { 
                             Family family = new Family()
                             family.name = yamlObj.families[i].family[0].name
                             families.family.add(family)
 
                             echo "A familia ${yamlObj.families[i].family[0].name} é constituida por ${yamlObj.families[i].family[0].members.size()} membros."
-
                             for(int f = 0; f < yamlObj.families[i].family[0].members.size(); f++) {
+
+                                Member member = new Member()
+                                member.firstName = yamlObj.families[i].family[0].members[f].firstName
+                                member.lastName = yamlObj.families[i].family[0].members[f].lastName
+                                member.job = yamlObj.families[i].family[0].members[f].job
+                                member.age = yamlObj.families[i].family[0].members[f].age
                             
                                 if( ver[sizee] == 1)
-                                    echo "${yamlObj.families[i].family[0].members[f]}"
+                                    echo "A familia tem o ${yamlObj.families[i].family[0].members[f]}"
                                 else
-                                    echo "Nao pertence a familia ${yamlObj.families[i].family[0].name}, ele esta na familia ${yamlObj.families[i].family[0].members[f].lastName}"
+                                    echo "Nao pertence a familia ${family.name}, ele esta na familia ${member.lastName}"
+                                
                                 sizee++;
 
                             }
