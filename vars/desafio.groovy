@@ -54,7 +54,7 @@ def call(body) {
                                 families.family.members.add(member)
 
                                 if ((member.firstName == "") || (member.firstName == null)) {
-                                    echo "O nome é invalido"
+                                    echo "O primeiro nome é invalido da familia ${i}"
                                 } else {                         
                                     echo "Olá, o meu nome é ${member.firstName} ${member.lastName} e tenho ${member.age} anos. A minha profissão é ${member.job}."
                                 }
