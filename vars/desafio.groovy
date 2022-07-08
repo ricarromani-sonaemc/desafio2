@@ -55,9 +55,20 @@ def call(body) {
 
                                 if ((member.firstName == "") || (member.firstName == null)) {
                                     echo "O primeiro nome é invalido da familia ${i}"
-                                } else {                         
+                                } 
+                                else if ((member.lastName == "") || (member.lastName == null)) {
+                                    echo "O primeiro nome é invalido da familia ${i}"
+                                } 
+                                else if ((member.job == "") || (member.job == null)) {
+                                    echo "O primeiro nome é invalido da familia ${i}"
+                                } 
+                                else if ((member.age <= 0) || (member.age == null)) {
+                                    echo "O primeiro nome é invalido da familia ${i}"
+                                } 
+                                else {                         
                                     echo "Olá, o meu nome é ${member.firstName} ${member.lastName} e tenho ${member.age} anos. A minha profissão é ${member.job}."
                                 }
+                                
 
                                 //"Olá, o meu nome é X, tenho Z anos e vim da cidade Y. A minha profissão é K."
                                 
