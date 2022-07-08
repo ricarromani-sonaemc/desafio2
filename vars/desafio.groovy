@@ -52,7 +52,7 @@ def call(body) {
                             echo "A familia ${yamlObj.families[i].family[0].name} é constituida por ${yamlObj.families[i].family[0].members.size()} membros."
                               
                             for(int f = 0; f < yamlObj.families[i].family[0].members.size(); f++) {
-                                String  n = yamlObj.families[i].family[0].members[f].lastName    
+                                def  n = yamlObj.families[i].family[0].members[f].lastName    
                                 echo "${n}"
                                 
                                 echo "${yamlObj.families[i].family[0].members[f]}"
