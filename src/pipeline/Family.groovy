@@ -2,11 +2,9 @@ package pipeline
 
 public class Family implements Serializable{
 
-    private String name;
     private List<Member> members;
 
     Family() {
-        this.name = ""
         this.members = []
     }
 /*
