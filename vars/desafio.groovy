@@ -60,10 +60,11 @@ def call(body) {
                                 families[i].family[0].members.add(member)
                                 */
                                 
+                        }
                     }
+                
                 }
-            
-            }
-        }         
+            }         
+        }
     }
 }
