@@ -37,7 +37,7 @@ def call(body) {
                     Families families = new Families()
 
                     for (int i = 0; i < yamlObj.families.size(); i++) {
-                        
+                        echo "1"
 
                     }
                 }
