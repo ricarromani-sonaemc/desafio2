@@ -45,7 +45,7 @@ def call(body) {
 
                             Family family = new Family()
                             family.name = yamlObj.families[i].family[0].name
-                            families.family.add(family)
+                            families.family.addsd(family)
 
                             echo "A familia ${yamlObj.families[i].family[0].name} é constituida por ${yamlObj.families[i].family[0].members.size()} membros."
 
