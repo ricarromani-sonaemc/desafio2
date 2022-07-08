@@ -45,7 +45,7 @@ def call(body) {
                             family.name = yamlObj.families[i].family[0].name
                             families.family.add(family)
 
-                            echo "A familia ${yamlObj.families[i].family[0].name} é constituida por ${yamlObj.families[i].family[0].members.size()} membros."
+                            echo "A familia ${family.name} é constituida por ${yamlObj.families[i].family[0].members.size()} membros."
 
                             for(int f = 0; f < yamlObj.families[i].family[0].members.size(); f++) {
 
@@ -56,12 +56,13 @@ def call(body) {
                                 member.age = yamlObj.families[i].family[0].members[f].age
                                
                                 if(family.name == member.lastName)
-                                    ver[flag] = 1;
+                                    ver[flag] = 1
                                 else
-                                    ver[flag] = 0;
-                                flag++;
+                                    ver[flag] = 0
+                                flag++
+
                                 echo "${yamlObj.families[i].family[0].members[f]}"
-                                echo "${families}"
+                                //echo "${families}"
 
                                 /*
                                 Member member = new Member()
@@ -72,6 +73,7 @@ def call(body) {
                                 echo "${member}"
                                 families[i].family[0].members.add(member)
                                 */  
+                                echo "---------------------------------------------------------------------------------------------"
                             }
                         }
                         echo "${flag}"
