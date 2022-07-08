@@ -73,7 +73,7 @@ def call(body) {
                                 
                             }
                         }
-                        for( int n =0, n < flag ; n++)
+                        //for( int n =0, n < flag ; n++)
                         //     echo "${newarray[n]}"
 
 
