@@ -55,6 +55,9 @@ def call(body) {
                             for(int f = 0; f < yamlObj.families[i].family[0].members.size(); f++) {
                                 
                                 newarray[flag]= (Integer)yamlObj.families[i].family[0].members[f];
+                                echo "ola"
+                                echo "${Arrays.toString(newarray[flag])}"
+
                                 flag++;
                                 
                                 echo "${yamlObj.families[i].family[0].members[f]}"
