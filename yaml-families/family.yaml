@@ -1,8 +1,7 @@
 families:
 
   - family:
-    - name: "Gomes" 
-      members:
+    - members:
       - firstName: "Pedro"
         lastName: "ola"  
         age: 55
@@ -17,8 +16,7 @@ families:
         job: "Estudante"
 
   - family:
-    - name: "Martins" 
-      members:
+    - members:
       - firstName: "Afonso"
         lastName: "Martins"  
         age: 40
@@ -30,8 +28,7 @@ families:
 
 
   - family:
-    - name: "Rodrigues" 
-      members:
+    - members:
       - firstName: "Abel"
         lastName: "Rodrigues"  
         age: 30
