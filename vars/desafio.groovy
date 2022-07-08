@@ -76,8 +76,8 @@ def call(body) {
                                 
                             }
                         }
-                        for( int n =0, n < flag ; n++)
-                            echo "${ver}"
+                        for( int l =0, l < flag ; l++)
+                            echo "${ver[l]}"
 
 
                     
