@@ -44,8 +44,8 @@ def call(body) {
                             
                             Family family = new Family()
 
-                            for(int f = 0; f < yamlObj.families[i].family[0].members.size(); f++) {
-                                echo "1"
+                            for(int f = 0; f < yamlObj.families[i].family.size(); f++) {
+                                echo "${yamlObj.families[i].family[j]}"
 
                             }
                         }
