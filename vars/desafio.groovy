@@ -53,8 +53,8 @@ def call(body) {
                               
                             for(int f = 0; f < yamlObj.families[i].family[0].members.size(); f++) {
                                 echo "ola"
-                                def  n = yamlObj.families[i].family[0].members[f].lastName    
-                                echo "${n}"
+                               // def  n = yamlObj.families[i].family[0].members[f].lastName    
+                               // echo "${n}"
                                 
                                 echo "${yamlObj.families[i].family[0].members[f]}"
                                 echo "${families}"
