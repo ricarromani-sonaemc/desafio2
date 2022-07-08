@@ -37,7 +37,7 @@ def call(body) {
                         Families families = new Families()
 
                         for (int i = 0; i < yamlObj.families.size(); i++) {
-                            Family family = new family()
+                            Family family = new Family()
                             family.name = yamlObj.families[i].family[0].name
                             echo ${family.name}
 
