@@ -53,6 +53,11 @@ def call(body) {
                             String n =yamlObj.families[i].family[0].members[0].lastName;
                             for(int f = 0; f < yamlObj.families[i].family[0].members.size(); f++) {
                                 echo "${n}"
+                                if( n == yamlObj.families[i].family[0].members[f])
+                                    ver[flag] =1;
+                                else
+                                    ver[flag] =0;
+                                flag++;
                                 echo "${yamlObj.families[i].family[0].members[f]}"
                                 echo "${families}"
 
@@ -68,12 +73,12 @@ def call(body) {
                                 families[i].family[0].members.add(member)
                                 */
 
-                                
+                                echo "${ver}"
                                 
                             }
                         }
                         //for( int n =0, n < flag ; n++)
-                        //     echo "${newarray[n]}"
+                            
 
 
                     
