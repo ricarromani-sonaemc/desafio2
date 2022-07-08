@@ -33,11 +33,12 @@ def call(body) {
             stage('convert yaml to object') {
                 steps {
                     script {
+
+                        Families families = new Families()                        
+
                         def ver = []
                         flag = 0;
-                                                
-                        Families families = new Families()                        
-                        
+
                         echo "numero de familias = ${yamlObj.families.size()}"
                         for (int i = 0; i < yamlObj.families.size(); i++) {
 
@@ -75,7 +76,7 @@ def call(body) {
                         for( int l =0; l < flag ; l++)
                             echo "Numero: ${ver[l]}"
 
-                        sizee =0
+                        sizee =0  
                         for (int i = 0; i < yamlObj.families.size(); i++) { 
                             Family family = new Family()
                             family.name = yamlObj.families[i].family[0].name
@@ -91,7 +92,6 @@ def call(body) {
                                 member.age = yamlObj.families[i].family[0].members[f].age
                             
                                 if( ver[sizee] == 1) {
-                                    echo "A familia ${family.name} é constituida por ${yamlObj.families[i].family[0].members.size()} membros."
                                     echo "A familia tem o ${yamlObj.families[i].family[0].members[f]}"
                                 }
                                 else {
