@@ -53,7 +53,7 @@ def call(body) {
                                 member.job = yamlObj.families[i].family[0].members[f].job
                                 member.age = yamlObj.families[i].family[0].members[f].age
                                 
-                                //families[i].family[0].members.add(member)
+                                //families.family.members.add(member)
 
                                 //"Olá, o meu nome é X, tenho Z anos e vim da cidade Y. A minha profissão é K."
                                 echo "Olá, o meu nome é ${member.firstName} ${member.lastName} e tenho ${member.age} anos. A minha profissão é ${member.job}."
