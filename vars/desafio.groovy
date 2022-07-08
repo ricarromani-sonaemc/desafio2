@@ -39,10 +39,9 @@ def call(body) {
                         for (int i = 0; i < yamlObj.families.size(); i++) {
 
                             Family family = new Family()
-                            family.name = yamlObj.families[i].family[0].name
                             families.family.add(family)
 
-                            echo "A familia ${yamlObj.families[i].family[0].name} é constituida por ${yamlObj.families[i].family[0].members.size()} membros."
+                            echo "A familia ${yamlObj.families[i].family[0].members[i].lastName} é constituida por ${yamlObj.families[i].family[0].members.size()} membros."
 
                             for(int f = 0; f < yamlObj.families[i].family[0].members.size(); f++) {
                                 
