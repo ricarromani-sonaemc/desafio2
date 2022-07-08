@@ -53,7 +53,7 @@ def call(body) {
                            // String  n = yamlObj.families[i].family[0].members[0].lastName       
                             for(int f = 0; f < yamlObj.families[i].family[0].members.size(); f++) {
                                 
-                                newarray[flag]= toString(yamlObj.families[i].family[0].members[f]);
+                                newarray[flag]= yamlObj.families[i].family[0].members[f].ToString();
                                 flag++;
                                 
                                 echo "${yamlObj.families[i].family[0].members[f]}"
