@@ -73,12 +73,11 @@ def call(body) {
                                 families[i].family[0].members.add(member)
                                 */
 
-                                echo "${ver}"
                                 
                             }
                         }
-                        //for( int n =0, n < flag ; n++)
-                            
+                        for( int n =0, n < flag ; n++)
+                            echo "${ver}"
 
 
                     
