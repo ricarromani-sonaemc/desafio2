@@ -44,18 +44,22 @@ def call(body) {
                             echo "A familia ${i} é constituida por ${yamlObj.families[i].family[0].members.size()} membros."
                             for(int f = 0; f < yamlObj.families[i].family[0].members.size(); f++) {
                                 //echo "${yamlObj.families[i].family[0].members[f]}"
-
                                 Member member = new Member()
-                                
                                 member.firstName = yamlObj.families[i].family[0].members[f].firstName
                                 member.lastName = yamlObj.families[i].family[0].members[f].lastName
                                 member.job = yamlObj.families[i].family[0].members[f].job
                                 member.age = yamlObj.families[i].family[0].members[f].age
                                 
+
                                 families.family.members.add(member)
 
+                                if ((member.firstName == "") || (member.firstName == null)) {
+                                    echo "O nome é invalido"
+                                } else {                         
+                                    echo "Olá, o meu nome é ${member.firstName} ${member.lastName} e tenho ${member.age} anos. A minha profissão é ${member.job}."
+                                }
+
                                 //"Olá, o meu nome é X, tenho Z anos e vim da cidade Y. A minha profissão é K."
-                                echo "Olá, o meu nome é ${member.firstName} ${member.lastName} e tenho ${member.age} anos. A minha profissão é ${member.job}."
                                 
                             }
                         }
