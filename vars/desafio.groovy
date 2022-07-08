@@ -33,7 +33,7 @@ def call(body) {
             stage('convert yaml to object') {
                 steps {
                     script {
-                        int ver =[]
+                        def ver =[]
                         flag =0;
                         
                        //mapper = new ObjectMapper(new YAMLFactory());
