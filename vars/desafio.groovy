@@ -34,15 +34,16 @@ def call(body) {
                 steps {
                     script {
 
-                    Families families = new Families()
+                        Families families = new Families()
 
-                    for (int i = 0; i < yamlObj.families.size(); i++) {
-                        echo "1"
+                        for (int i = 0; i < yamlObj.families.size(); i++) {
+                            echo "1"
 
+                        }
                     }
                 }
-            }
             
-        }
-    }         
+            }
+        }         
+    }
 }
