@@ -94,34 +94,15 @@ def call(body) {
                             if( ver[sizee] == 1)
                                 echo "${yamlObj.families[i].family[0].members[f]}"
                             else
-                                echo "nao pertence a familia"
+                                echo "nao pertence a familia ${yamlObj.families[i].family[0].members[f].lastName}"
                             sizee++;
-                            
-                            //echo "${families}"
 
-                            /*
-                            Member member = new Member()
-                            member.firstName = yamlObj.families[i].family[0].members[f].firstName
-                            member.lastName = yamlObj.families[i].family[0].members[f].lastName
-                            member.job = yamlObj.families[i].family[0].members[f].job
-                            member.age = yamlObj.families[i].family[0].members[f].age
-
-                            echo "${member}"
-                            
-                            families[i].family[0].members.add(member)
-                            */
-
-                            
                         }
                     }
-
-
-                    
                         //echo "${member.ToString()}"
                         //echo "${member.firstName}"
                         //echo "${member.lastName}"
                         //echo "${member.job}"
-
                     }
                 }
             }
