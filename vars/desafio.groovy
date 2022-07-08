@@ -57,10 +57,12 @@ def call(body) {
                                 //echo "${member}"
                                 //families[i].family[0].members.add(member)
                                
-                                if(family.name == member.lastName)
+                                if(family.name == member.lastName){
                                     ver[flag] = 1
-                                else
+                                }
+                                else {
                                     ver[flag] = 0
+                                }  
                                 flag++
 
                                 echo "Membro: ${yamlObj.families[i].family[0].members[f]}"
@@ -79,7 +81,7 @@ def call(body) {
                             family.name = yamlObj.families[i].family[0].name
                             families.family.add(family)
 
-                            echo "A familia ${yamlObj.families[i].family[0].name} é constituida por ${yamlObj.families[i].family[0].members.size()} membros."
+                            echo "A familia ${family.name} é constituida por ${yamlObj.families[i].family[0].members.size()} membros."
                             for(int f = 0; f < yamlObj.families[i].family[0].members.size(); f++) {
 
                                 Member member = new Member()
@@ -88,15 +90,17 @@ def call(body) {
                                 member.job = yamlObj.families[i].family[0].members[f].job
                                 member.age = yamlObj.families[i].family[0].members[f].age
                             
-                                if( ver[sizee] == 1)
+                                if( ver[sizee] == 1) {
+                                    echo "A familia ${family.name} é constituida por ${yamlObj.families[i].family[0].members.size()} membros."
                                     echo "A familia tem o ${yamlObj.families[i].family[0].members[f]}"
-                                else
+                                }
+                                else {
                                     echo "Nao pertence a familia ${family.name}, ele esta na familia ${member.lastName}"
-                                
+                                }                                
                                 sizee++;
 
                             }
-                    }
+                        }
                         //echo "${member.ToString()}"
                         //echo "${member.firstName}"
                         //echo "${member.lastName}"
