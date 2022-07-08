@@ -45,23 +45,17 @@ def call(body) {
                             for(int f = 0; f < yamlObj.families[i].family[0].members.size(); f++) {
                                 
                                 echo "${yamlObj.families[i].family[0].members[f]}"
-                                echo "${yamlObj.families[i].family[0].members[f].firstName}"
 
-                                def String nome = yamlObj.families[i].family[0].members[f].firstName
-                                echo "O nome é ${nome}"
-
-                                /*
                                 Member member = new Member()
                                 member.firstName = yamlObj.families[i].family[0].members[f].firstName
                                 member.lastName = yamlObj.families[i].family[0].members[f].lastName
                                 member.job = yamlObj.families[i].family[0].members[f].job
                                 member.age = yamlObj.families[i].family[0].members[f].age
 
-                                echo "${member}"
-                                
                                 families[i].family[0].members.add(member)
-                                */
-                                
+
+                                //"Olá, o meu nome é X, tenho Z anos e vim da cidade Y. A minha profissão é K."
+                                echo "Olá, o meu nome é ${member.firstName} ${member.lastName} e tenho ${member.age} anos. A minha profissão é ${member.job}."
                             }
                         }
                     
