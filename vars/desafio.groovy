@@ -80,6 +80,41 @@ def call(body) {
                         for( int l =0; l < flag ; l++)
                             echo "${ver[l]}"
 
+                        sizee =0
+                        for (int i = 0; i < yamlObj.families.size(); i++) {
+
+                        Family family = new Family()
+                        family.name = yamlObj.families[i].family[0].name
+                        families.family.add(family)
+
+                        echo "A familia ${yamlObj.families[i].family[0].name} é constituida por ${yamlObj.families[i].family[0].members.size()} membros."
+
+                        for(int f = 0; f < yamlObj.families[i].family[0].members.size(); f++) {
+                            echo "${n}"
+                            if( ver[sizee] == 1)
+                                echo "${yamlObj.families[i].family[0].members[f]}"
+                            else
+                                echo "nao pertence a familia"
+                            sizee++;
+                            
+                            //echo "${families}"
+
+                            /*
+                            Member member = new Member()
+                            member.firstName = yamlObj.families[i].family[0].members[f].firstName
+                            member.lastName = yamlObj.families[i].family[0].members[f].lastName
+                            member.job = yamlObj.families[i].family[0].members[f].job
+                            member.age = yamlObj.families[i].family[0].members[f].age
+
+                            echo "${member}"
+                            
+                            families[i].family[0].members.add(member)
+                            */
+
+                            
+                        }
+                    }
+
 
                     
                         //echo "${member.ToString()}"
