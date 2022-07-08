@@ -42,7 +42,7 @@ def call(body) {
                             families.family.add(family)
 
                             echo "A familia ${i} é constituida por ${yamlObj.families[i].family[0].members.size()} membros."
-                            for(int f = 0; f < yamlObj.families[i].family[0].members.size(); f++) {
+                            for(int f = 0; f < yamlObj.families[i].family[1].members.size(); f++) {
                                 //echo "${yamlObj.families[i].family[0].members[f]}"
                                 Member member = new Member()
                                 member.firstName = yamlObj.families[i].family[0].members[f].firstName
