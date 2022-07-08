@@ -94,7 +94,7 @@ def call(body) {
                             if( ver[sizee] == 1)
                                 echo "${yamlObj.families[i].family[0].members[f]}"
                             else
-                                echo "nao pertence a familia ${yamlObj.families[i].family[0].members[f].lastName}"
+                                echo "Nao pertence a familia ${yamlObj.families[i].family[0].name}, ele esta na familia ${yamlObj.families[i].family[0].members[f].lastName}"
                             sizee++;
 
                         }
