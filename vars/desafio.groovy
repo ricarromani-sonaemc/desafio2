@@ -1,7 +1,6 @@
 import pipeline.Families
 import pipeline.Family
 import pipeline.Member
-import java.util.Arrays;
 
 
 
@@ -34,7 +33,7 @@ def call(body) {
             stage('convert yaml to object') {
                 steps {
                     script {
-                        Integer[] newarray;
+                        String newarray =[]
                         flag =0;
                         
                        //mapper = new ObjectMapper(new YAMLFactory());
@@ -54,10 +53,8 @@ def call(body) {
                            // String  n = yamlObj.families[i].family[0].members[0].lastName       
                             for(int f = 0; f < yamlObj.families[i].family[0].members.size(); f++) {
                                 
-                                newarray[flag]= (Integer)yamlObj.families[i].family[0].members[f];
-                                echo "ola"
-                                echo "${Arrays.toString(newarray[flag])}"
-
+                                newarray[flag]= yamlObj.families[i].family[0].members[f];
+                                echo "pça"
                                 flag++;
                                 
                                 echo "${yamlObj.families[i].family[0].members[f]}"
@@ -77,8 +74,6 @@ def call(body) {
                                 
                             }
                         }
-                         echo "${Arrays.toString(newarray)}"
-
                         //for( int n =0, n < flag ; n++)
                         //     echo "${newarray[n]}"
 
