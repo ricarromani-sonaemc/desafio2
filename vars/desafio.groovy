@@ -33,8 +33,8 @@ def call(body) {
             stage('convert yaml to object') {
                 steps {
                     script {
-                        def ver =[]
-                        flag =0;
+                        def ver = []
+                        flag = 0;
                         
                        //mapper = new ObjectMapper(new YAMLFactory());
                         //mapper.findAndRegisterModules();/*
@@ -50,13 +50,13 @@ def call(body) {
                             families.family.add(family)
 
                             echo "A familia ${yamlObj.families[i].family[0].name} é constituida por ${yamlObj.families[i].family[0].members.size()} membros."
-                            String n =yamlObj.families[i].family[0].name
+
                             for(int f = 0; f < yamlObj.families[i].family[0].members.size(); f++) {
                                 echo "${n}"
-                                if( n == yamlObj.families[i].family[0].members[f].lastName)
-                                    ver[flag] =1;
+                                if( yamlObj.families[i].family[0].name == yamlObj.families[i].family[0].members[f].lastName)
+                                    ver[flag] = 1;
                                 else
-                                    ver[flag] =0;
+                                    ver[flag] = 0;
                                 flag++;
                                 echo "${yamlObj.families[i].family[0].members[f]}"
                                 echo "${families}"
