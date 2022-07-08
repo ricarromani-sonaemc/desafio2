@@ -53,7 +53,7 @@ def call(body) {
                             String n =yamlObj.families[i].family[0].members[0].lastName;
                             for(int f = 0; f < yamlObj.families[i].family[0].members.size(); f++) {
                                 echo "${n}"
-                                if( n == yamlObj.families[i].family[0].members[f])
+                                if( n == yamlObj.families[i].family[0].members[f].lastName)
                                     ver[flag] =1;
                                 else
                                     ver[flag] =0;
