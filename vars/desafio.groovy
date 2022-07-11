@@ -3,6 +3,9 @@ import pipeline.Family
 import pipeline.Member
 import log.logs
 
+
+
+
 def call(body) {
 
     //def branch = env.BRANCH_NAME 
@@ -53,21 +56,23 @@ def call(body) {
                                 families.family.members.add(member)
 
                                 if ((member.firstName == "") || (member.firstName == null)) {
-                                    logs.log_error("O nome ${firstName} é invalido da familia ${i}")
+                                    echo "O nome ${firstName} é invalido da familia ${i}"
                                 } 
                                 else if ((member.lastName == "") || (member.lastName == null)) {
-                                    logs.log_error("O nome ${firstName} é invalido da familia ${i}")
+                                    echo "O nome ${firstName} é invalido da familia ${i}"
                                 } 
                                 else if ((member.job == "") || (member.job == null)) {
-                                    logs.log_error("O nome ${firstName} é invalido da familia ${i}")
+                                    echo "O nome ${firstName} é invalido da familia ${i}"
                                 } 
                                 else if ((member.age <= 0) || (member.age == null)) {
-                                    logs.log_error("O nome ${firstName} é invalido da familia ${i}")
+                                    echo "O nome ${firstName} é invalido da familia ${i}"
                                 }
                                 else {                         
-                                    logs.log_succeed("Olá, o meu nome é ${member.firstName} ${member.lastName} e tenho ${member.age} anos. A minha profissão é ${member.job}.")
+                                    echo "Olá, o meu nome é ${member.firstName} ${member.lastName} e tenho ${member.age} anos. A minha profissão é ${member.job}."
                                 }
                                 
+                                
+
                                 //"Olá, o meu nome é X, tenho Z anos e vim da cidade Y. A minha profissão é K."
                                 
                             }
