@@ -53,16 +53,16 @@ def call(body) {
                                 families.family.members.add(member)
 
                                 if ((member.firstName == "") || (member.firstName == null)) {
-                                    echo "O nome ${firstName} é invalido da familia ${i}"
+                                    echo "O nome ${member.firstName} é invalido da familia ${i}"
                                 } 
                                 else if ((member.lastName == "") || (member.lastName == null)) {
-                                    echo "O nome ${firstName} é invalido da familia ${i}"
+                                    echo "O nome ${member.firstName} é invalido da familia ${i}"
                                 } 
                                 else if ((member.job == "") || (member.job == null)) {
-                                    echo "O nome ${firstName} é invalido da familia ${i}"
+                                    echo "O nome ${member.firstName} é invalido da familia ${i}"
                                 } 
                                 else if ((member.age <= 0) || (member.age == null)) {
-                                    echo "O nome ${firstName} é invalido da familia ${i}"
+                                    echo "O nome ${member.firstName} é invalido da familia ${i}"
                                 }
                                 else {                         
                                     echo "Olá, o meu nome é ${member.firstName} ${member.lastName} e tenho ${member.age} anos. A minha profissão é ${member.job}."
