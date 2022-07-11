@@ -6,14 +6,17 @@ families:
         lastName: "Gomes"  
         age: 55
         job: "Professor"
+        parent: "Pai"
       - firstName: "Maria"
         lastName: "Gomes"  
         age: 52
         job: "Professora"
+        parent: "Mae"
       - firstName: "Jorge"
         lastName: "Gomes"  
         age: 12
         job: "Estudante"
+        parent: "Filho"
 
   - family:
     - members:
@@ -21,10 +24,12 @@ families:
         lastName: "Martins"  
         age: 40
         job: "Enfermeiro"
+        parent: "Pai"
       - firstName: "Joana"
         lastName: "Martins"  
         age: 41
         job: "Enfermeira"
+        parent: "Mae"
 
 
   - family:
@@ -33,3 +38,4 @@ families:
         lastName: "Rodrigues"  
         age: 30
         job: "Medico"
+        parent: "Pai"
