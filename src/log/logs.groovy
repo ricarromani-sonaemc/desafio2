@@ -6,4 +6,4 @@ def log_error(message) {
     echo "ERROR: ${message}"
 }
 
-export this
+return this

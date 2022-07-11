@@ -8,9 +8,7 @@ def call(body) {
     //def branch = env.BRANCH_NAME 
     def yamlObj
     def logs
-
-    //def member2 = new Member()
-
+    
     pipeline {
         agent any
         stages {
@@ -19,7 +17,7 @@ def call(body) {
                 steps {          
                     script {
                         logs = load "src/log/logs.groovy"
-                        
+
                         git branch: "yaml", credentialsId: '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', url: "https://github.com/ricarromani-sonaemc/desafio2.git"
                         
                         //sh "ls ${WORKSPACE}"
