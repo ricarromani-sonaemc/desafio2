@@ -7,6 +7,7 @@ def call(body) {
 
     //def branch = env.BRANCH_NAME 
     def yamlObj
+    def logs
 
     //def member2 = new Member()
 
@@ -21,8 +22,9 @@ def call(body) {
                         
                         //sh "ls ${WORKSPACE}"
                         yamlObj = readYaml file: "${WORKSPACE}/yaml-families/family.yaml"
-                        //yamlObj = readYaml file: "resources/member.yaml"
                         echo "${yamlObj}" 
+
+                        logs = load "src/log/logs.groovy" 
                                
                     }   
                 }
@@ -53,19 +55,19 @@ def call(body) {
                                 families.family.members.add(member)
 
                                 if ((member.firstName == "") || (member.firstName == null)) {
-                                    echo "O nome ${member.firstName} é invalido da familia ${i}"
+                                    logs.log_error("O primeiro nome é invalido da familia ${i}")
                                 } 
                                 else if ((member.lastName == "") || (member.lastName == null)) {
-                                    echo "O nome ${member.firstName} é invalido da familia ${i}"
+                                    logs.log_error("O último nome é invalido da familia ${i}")
                                 } 
                                 else if ((member.job == "") || (member.job == null)) {
-                                    echo "O nome ${member.firstName} é invalido da familia ${i}"
+                                    logs.log_error("O trabalho é invalido da familia ${i}")
                                 } 
                                 else if ((member.age <= 0) || (member.age == null)) {
-                                    echo "O nome ${member.firstName} é invalido da familia ${i}"
+                                    logs.log_error("A idade é invalido da familia ${i}")
                                 }
                                 else {                         
-                                    echo "Olá, o meu nome é ${member.firstName} ${member.lastName} e tenho ${member.age} anos. A minha profissão é ${member.job}."
+                                    logs.log_succeed("Olá, o meu nome é ${member.firstName} ${member.lastName} e tenho ${member.age} anos. A minha profissão é ${member.job}.")
                                 }
                                 
                                 
