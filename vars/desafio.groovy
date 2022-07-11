@@ -1,6 +1,7 @@
 import pipeline.Families
 import pipeline.Family
 import pipeline.Member
+import log.logs
 
 
 
@@ -49,24 +50,25 @@ def call(body) {
                                 member.lastName = yamlObj.families[i].family[0].members[f].lastName
                                 member.job = yamlObj.families[i].family[0].members[f].job
                                 member.age = yamlObj.families[i].family[0].members[f].age
+                                member.parent = yamlObj.families[i].family[0].members[f].parent
                                 
 
                                 families.family.members.add(member)
 
                                 if ((member.firstName == "") || (member.firstName == null)) {
-                                    echo "O primeiro nome é invalido da familia ${i}"
+                                    logs.log_error("O nome ${firstName} é invalido da familia ${i}")
                                 } 
                                 else if ((member.lastName == "") || (member.lastName == null)) {
-                                    echo "O primeiro nome é invalido da familia ${i}"
+                                    logs.log_error("O nome ${firstName} é invalido da familia ${i}")
                                 } 
                                 else if ((member.job == "") || (member.job == null)) {
-                                    echo "O primeiro nome é invalido da familia ${i}"
+                                    logs.log_error("O nome ${firstName} é invalido da familia ${i}")
                                 } 
                                 else if ((member.age <= 0) || (member.age == null)) {
-                                    echo "O primeiro nome é invalido da familia ${i}"
-                                } 
+                                    logs.log_error("O nome ${firstName} é invalido da familia ${i}")
+                                }
                                 else {                         
-                                    echo "Olá, o meu nome é ${member.firstName} ${member.lastName} e tenho ${member.age} anos. A minha profissão é ${member.job}."
+                                    logs.log_succeed("Olá, o meu nome é ${member.firstName} ${member.lastName} e tenho ${member.age} anos. A minha profissão é ${member.job}.")
                                 }
                                 
                                 
