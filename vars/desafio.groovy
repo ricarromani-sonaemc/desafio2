@@ -3,9 +3,6 @@ import pipeline.Family
 import pipeline.Member
 import log.logs
 
-
-
-
 def call(body) {
 
     //def branch = env.BRANCH_NAME 
@@ -71,8 +68,6 @@ def call(body) {
                                     logs.log_succeed("Olá, o meu nome é ${member.firstName} ${member.lastName} e tenho ${member.age} anos. A minha profissão é ${member.job}.")
                                 }
                                 
-                                
-
                                 //"Olá, o meu nome é X, tenho Z anos e vim da cidade Y. A minha profissão é K."
                                 
                             }

@@ -7,3 +7,5 @@ def log_succeed(message) {
 def log_error(message) {
     echo "ERROR: ${message}"
 }
+
+export this
