@@ -56,7 +56,7 @@ def call(body) {
                                 member.parent = yamlObj.families[i].family[0].members[f].parent
                                 families.family.members.add(member)
 
-                                if(((family.parent == "Pai") || (family.parent == "Mae")) && ((member.firstName == "") || (member.firstName == null) || (member.lastName == "") || (member.lastName == null)
+                                if(((member.parent == "Pai") || (member.parent == "Mae")) && ((member.firstName == "") || (member.firstName == null) || (member.lastName == "") || (member.lastName == null)
                                 || (member.job == "") || (member.job == null) || (member.age <= 0) || (member.age == null))){
                                     ver[flag] = 1
                                 }
