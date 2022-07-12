@@ -113,3 +113,17 @@ def call(body) {
         }
     }         
 }
+
+
+                                if((member.parent == "Pai") && ((member.firstName == "") || (member.firstName == null) || (member.lastName == "") || (member.lastName == null)
+                                || (member.job == "") || (member.job == null) || (member.age <= 0) || (member.age == null))){
+                                    ver[flag] = 1
+                                } 
+                                else if((member.parent == "Mae") && ((member.firstName == "") || (member.firstName == null) || (member.lastName == "") || (member.lastName == null)
+                                || (member.job == "") || (member.job == null) || (member.age <= 0) || (member.age == null))){
+                                    ver[flag] = 1
+                                }
+                                else {
+                                    ver[flag] = 0
+                                }  
+                                flag++

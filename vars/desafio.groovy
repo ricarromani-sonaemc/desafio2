@@ -56,20 +56,16 @@ def call(body) {
                                 member.parent = yamlObj.families[i].family[0].members[f].parent
                                 families.family.members.add(member)
 
-                                if((member.parent == "Pai") && ((member.firstName == "") || (member.firstName == null) || (member.lastName == "") || (member.lastName == null)
-                                || (member.job == "") || (member.job == null) || (member.age <= 0) || (member.age == null))){
+                                if ((member.parent == "Pai") || (member.parent == "Mae")){
                                     ver[flag] = 1
                                 } 
-                                else if((member.parent == "Mae") && ((member.firstName == "") || (member.firstName == null) || (member.lastName == "") || (member.lastName == null)
-                                || (member.job == "") || (member.job == null) || (member.age <= 0) || (member.age == null))){
-                                    ver[flag] = 1
-                                }
                                 else {
                                     ver[flag] = 0
                                 }  
                                 flag++
+                                for( int l =0; l < flag ; l++)
+                                    echo "Numero: ${ver[l]}"
 
-                                echo "${ver[]}"
 
                                 if ((member.firstName == "") || (member.firstName == null)) {
                                     logs.log_error("O primeiro nome é invalido da familia ${i}")
