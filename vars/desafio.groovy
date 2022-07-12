@@ -68,9 +68,9 @@ def call(body) {
                                 
                                 echo "${flag}"
                                 for( int l =0; l < flag ; l++) {
-                                    if (ver[flag] == 1) {
+                                    if (ver[l] == 1) {
                                         logs.log_error("Algum campo esta errado do membro da familia ${i}")
-                                    } else if (ver[flag] == 0) {
+                                    } else if (ver[l] == 0) {
                                         logs.log_succeed("Olá, o meu nome é ${member.firstName} ${member.lastName} e tenho ${member.age} anos. A minha profissão é ${member.job}.")
                                     }
                                 }
