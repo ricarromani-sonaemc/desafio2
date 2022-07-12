@@ -69,7 +69,7 @@ def call(body) {
                                 }  
                                 flag++
 
-                                echo "${ver[flag]}"
+                                echo "${ver[]}"
 
                                 if ((member.firstName == "") || (member.firstName == null)) {
                                     logs.log_error("O primeiro nome é invalido da familia ${i}")
