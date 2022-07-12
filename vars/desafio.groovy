@@ -8,7 +8,7 @@ def call(body) {
     //def branch = env.BRANCH_NAME 
     def yamlObj
     def logs
-    
+
     pipeline {
         agent any
         stages {
@@ -54,9 +54,12 @@ def call(body) {
 
                                 families.family.members.add(member)
 
+                                errorFlag = 0
+
                                 if ((member.firstName == "") || (member.firstName == null)) {
                                     logs.log_error("O primeiro nome é invalido da familia ${i}")
-                                } 
+
+                                }
                                 else if ((member.lastName == "") || (member.lastName == null)) {
                                     logs.log_error("O último nome é invalido da familia ${i}")
                                 } 
@@ -69,14 +72,10 @@ def call(body) {
                                 else {                         
                                     logs.log_succeed("Olá, o meu nome é ${member.firstName} ${member.lastName} e tenho ${member.age} anos. A minha profissão é ${member.job}.")
                                 }
-                                
-                                
-
                                 //"Olá, o meu nome é X, tenho Z anos e vim da cidade Y. A minha profissão é K."
                                 
                             }
-                        }
-                    
+                        }      
                     }
                 }         
             }
