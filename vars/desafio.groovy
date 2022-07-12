@@ -69,12 +69,8 @@ def call(body) {
                                 }  
                                 flag++
 
+                                echo "${ver[flag]}"
 
-                                for( int l =0; l < flag ; l++)
-                                    echo "Numero: ${ver[l]}"
-
-
-                                
                                 if ((member.firstName == "") || (member.firstName == null)) {
                                     logs.log_error("O primeiro nome é invalido da familia ${i}")
                                 }
