@@ -56,7 +56,11 @@ def call(body) {
                                 member.parent = yamlObj.families[i].family[0].members[f].parent
                                 families.family.members.add(member)
 
-                                if(((member.parent == "Pai") || (member.parent == "Mae")) && ((member.firstName == "") || (member.firstName == null) || (member.lastName == "") || (member.lastName == null)
+                                if((member.parent == "Pai") && ((member.firstName == "") || (member.firstName == null) || (member.lastName == "") || (member.lastName == null)
+                                || (member.job == "") || (member.job == null) || (member.age <= 0) || (member.age == null))){
+                                    ver[flag] = 1
+                                } 
+                                else if((member.parent == "Mae") && ((member.firstName == "") || (member.firstName == null) || (member.lastName == "") || (member.lastName == null)
                                 || (member.job == "") || (member.job == null) || (member.age <= 0) || (member.age == null))){
                                     ver[flag] = 1
                                 }
@@ -65,20 +69,14 @@ def call(body) {
                                 }  
                                 flag++
 
-                                
-                                echo "${flag}"
-                                for( int l =0; l < flag ; l++) {
-                                    if (ver[l] == 1) {
-                                        logs.log_error("Algum campo esta errado do membro da familia ${i}")
-                                    } else if (ver[l] == 0) {
-                                        logs.log_succeed("Olá, o meu nome é ${member.firstName} ${member.lastName} e tenho ${member.age} anos. A minha profissão é ${member.job}.")
-                                    }
-                                }
 
-                                /*
+                                for( int l =0; l < flag ; l++)
+                                    echo "Numero: ${ver[l]}"
+
+
+                                
                                 if ((member.firstName == "") || (member.firstName == null)) {
                                     logs.log_error("O primeiro nome é invalido da familia ${i}")
-
                                 }
                                 else if ((member.lastName == "") || (member.lastName == null)) {
                                     logs.log_error("O último nome é invalido da familia ${i}")
@@ -93,7 +91,7 @@ def call(body) {
                                     //"Olá, o meu nome é X, tenho Z anos e vim da cidade Y. A minha profissão é K."                       
                                     logs.log_succeed("Olá, o meu nome é ${member.firstName} ${member.lastName} e tenho ${member.age} anos. A minha profissão é ${member.job}.")
                                 }
-                                */
+                                
                                 
                                 
                             }
