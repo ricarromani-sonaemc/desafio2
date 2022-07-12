@@ -70,7 +70,6 @@ def call(body) {
                                     break
                                 }
 
-                            
                                 if ((member.firstName == "") || (member.firstName == null)) {
                                     logs.log_error("O primeiro nome é invalido da familia ${i}")
                                 }
