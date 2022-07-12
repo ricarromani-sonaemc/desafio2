@@ -33,6 +33,10 @@ def call(body) {
             stage('convert yaml to object') {
                 steps {
                     script {
+
+                        def ver = []
+                        flag = 0;
+
                         Families families = new Families()                        
                         
                         echo "numero de familias = ${yamlObj.families.size()}"
@@ -50,11 +54,20 @@ def call(body) {
                                 member.job = yamlObj.families[i].family[0].members[f].job
                                 member.age = yamlObj.families[i].family[0].members[f].age
                                 member.parent = yamlObj.families[i].family[0].members[f].parent
-                                
-
                                 families.family.members.add(member)
 
-                                errorFlag = 0
+                                if(((family.parent == "Pai") || (family.parent == "Mae")) && ((member.firstName == "") || (member.firstName == null) || (member.lastName == "") || (member.lastName == null)
+                                || (member.job == "") || (member.job == null) || (member.age <= 0) || (member.age == null))){
+                                    ver[flag] = 1
+                                }
+                                else {
+                                    ver[flag] = 0
+                                }  
+                                flag++
+
+                                echo "${flag}"
+                                for( int l =0; l < flag ; l++)
+                                    echo "Numero: ${ver[l]}"
 
                                 if ((member.firstName == "") || (member.firstName == null)) {
                                     logs.log_error("O primeiro nome é invalido da familia ${i}")
@@ -69,10 +82,11 @@ def call(body) {
                                 else if ((member.age <= 0) || (member.age == null)) {
                                     logs.log_error("A idade é invalido da familia ${i}")
                                 }
-                                else {                         
+                                else {  
+                                    //"Olá, o meu nome é X, tenho Z anos e vim da cidade Y. A minha profissão é K."                       
                                     logs.log_succeed("Olá, o meu nome é ${member.firstName} ${member.lastName} e tenho ${member.age} anos. A minha profissão é ${member.job}.")
                                 }
-                                //"Olá, o meu nome é X, tenho Z anos e vim da cidade Y. A minha profissão é K."
+                                
                                 
                             }
                         }      
