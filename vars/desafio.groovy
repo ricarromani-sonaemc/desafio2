@@ -96,7 +96,10 @@ def call(body) {
             stage('') {
                 steps {
                     script {
-                        sh "mkdir ${WORKSPACE}/families"
+                        //sh "mkdir ${WORKSPACE}/families"
+                        writeFile file: "${WORKSPACE}/families/familia.txt", text: "This file is useful, need to archive it."
+
+                        
                     }
                 }
             }
