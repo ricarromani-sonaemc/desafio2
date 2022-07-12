@@ -64,7 +64,7 @@ def call(body) {
                                 }  
                                 flag++
 
-                                if ((ver[flag] == 1) && (member.firstName == "") || (member.firstName == null)) {
+                                if ((ver[flag] == 1) && ((member.firstName == "") || (member.firstName == null))) {
                                     logs.log_error("O primeiro nome é invalido da familia ${i}")
                                 }
                                 else if ((member.lastName == "") || (member.lastName == null)) {
