@@ -57,10 +57,10 @@ def call(body) {
                                 families.family.members.add(member)
 
                                 if ((member.parent == "Pai") || (member.parent == "Mae")){
-                                    ver[flag] = 1
+                                    ver[flag] = 2
                                 } 
-                                else {
-                                    ver[flag] = 0
+                                else if ((member.parent == "Filho")) {
+                                    ver[flag] = 1
                                 }  
                                 flag++
 
@@ -80,10 +80,11 @@ def call(body) {
                                     //"Olá, o meu nome é X, tenho Z anos e vim da cidade Y. A minha profissão é K."                       
                                     logs.log_succeed("Olá, o meu nome é ${member.firstName} ${member.lastName} e tenho ${member.age} anos. A minha profissão é ${member.job}.")
                                 }
-                                
-                                
-                                
+
                             }
+                            echo "${flag}"
+                            for( int l =0; l < flag ; l++)
+                                echo "Numero: ${ver[l]}"
                         }      
                     }
                 }         
