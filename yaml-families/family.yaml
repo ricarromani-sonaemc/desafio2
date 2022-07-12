@@ -10,7 +10,7 @@ families:
       - firstName: "Joana"
         lastName: "Gomes"  
         age: 52
-        job: ""
+        job: 
         parent: "Mae"
       - firstName: "Pedro"
         lastName: "Gomes"  
