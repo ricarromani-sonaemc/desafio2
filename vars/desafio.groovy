@@ -64,27 +64,25 @@ def call(body) {
                                 }  
                                 flag++
 
-                                if ((ver[flag] == 1) && ((member.firstName == "") || (member.firstName == null))) {
-                                    logs.log_error("O primeiro nome é invalido da familia ${i}")
+                                for( int l =0; l < flag ; l++) {
+                                    if ((ver[l] == 1) && ((member.firstName == "") || (member.firstName == null))) {
+                                        logs.log_error("O primeiro nome é invalido da familia ${i}")
+                                    }
+                                    else if ((member.lastName == "") || (member.lastName == null)) {
+                                        logs.log_error("O último nome é invalido da familia ${i}")
+                                    } 
+                                    else if ((member.job == "") || (member.job == null)) {
+                                        logs.log_error("O trabalho é invalido da familia ${i}")
+                                    } 
+                                    else if ((member.age <= 0) || (member.age == null)) {
+                                        logs.log_error("A idade é invalido da familia ${i}")
+                                    }
+                                    else {  
+                                        //"Olá, o meu nome é X, tenho Z anos e vim da cidade Y. A minha profissão é K."                       
+                                        logs.log_succeed("Olá, o meu nome é ${member.firstName} ${member.lastName} e tenho ${member.age} anos. A minha profissão é ${member.job}.")
+                                    }
                                 }
-                                else if ((member.lastName == "") || (member.lastName == null)) {
-                                    logs.log_error("O último nome é invalido da familia ${i}")
-                                } 
-                                else if ((member.job == "") || (member.job == null)) {
-                                    logs.log_error("O trabalho é invalido da familia ${i}")
-                                } 
-                                else if ((member.age <= 0) || (member.age == null)) {
-                                    logs.log_error("A idade é invalido da familia ${i}")
-                                }
-                                else {  
-                                    //"Olá, o meu nome é X, tenho Z anos e vim da cidade Y. A minha profissão é K."                       
-                                    logs.log_succeed("Olá, o meu nome é ${member.firstName} ${member.lastName} e tenho ${member.age} anos. A minha profissão é ${member.job}.")
-                                }
-
                             }
-                            echo "${flag}"
-                            for( int l =0; l < flag ; l++)
-                                echo "Numero: ${ver[l]}"
                         }      
                     }
                 }         
