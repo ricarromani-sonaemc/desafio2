@@ -2,12 +2,12 @@ families:
 
   - family:
     - members:
-      - firstName: ""
+      - firstName: "Pedro"
         lastName: "Gomes"  
         age: 55
         job: "Professor"
         parent: "Pai"
-      - firstName: "Maria"
+      - firstName: ""
         lastName: "Gomes"  
         age: 52
         job: "Professora"
