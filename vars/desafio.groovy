@@ -45,6 +45,7 @@ def call(body) {
                             families.family.add(family)
 
                             echo "A familia ${i} é constituida por ${yamlObj.families[i].family[0].members.size()} membros."
+                            //for (Families f : yamlObj.families)
                             for(int f = 0; f < yamlObj.families[i].family[0].members.size(); f++) {
                                 //echo "${yamlObj.families[i].family[0].members[f]}"
                                 Member member = new Member()
@@ -91,6 +92,16 @@ def call(body) {
                     }
                 }         
             }
+            //stage criação das pasta e dos ficheiros
+            stage('') {
+                steps {
+                    script {
+                        sh "mkdir ${WORKSPACE}/families"
+                    }
+                }
+            }
+
+            //stage logs
         }
     }
 }
