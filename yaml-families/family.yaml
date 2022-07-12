@@ -10,9 +10,9 @@ families:
       - firstName: "Joana"
         lastName: "Gomes"  
         age: 52
-        job: "Professora"
+        job: ""
         parent: "Mae"
-      - firstName: ""
+      - firstName: "Pedro"
         lastName: "Gomes"  
         age: 12
         job: "Estudante"
@@ -21,7 +21,7 @@ families:
   - family:
     - members:
       - firstName: "Joao"
-        lastName: "Martins"  
+        lastName: ""  
         age: 40
         job: "Enfermeiro"
         parent: "Pai"
