@@ -20,7 +20,7 @@ families:
 
   - family:
     - members:
-      - firstName: "Afonso"
+      - firstName: ""
         lastName: "Martins"  
         age: 40
         job: "Enfermeiro"
@@ -30,6 +30,11 @@ families:
         age: 41
         job: "Enfermeira"
         parent: "Mae"
+      - firstName: "Jorge"
+        lastName: "Gomes"  
+        age: 12
+        job: "Estudante"
+        parent: "Filho"
 
 
   - family:
