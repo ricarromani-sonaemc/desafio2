@@ -34,8 +34,7 @@ def call(body) {
                 steps {
                     script {
 
-                        def ver = []
-                        flag = 0;
+                        def flag;
 
                         Families families = new Families()                        
                         
@@ -56,31 +55,37 @@ def call(body) {
                                 member.parent = yamlObj.families[i].family[0].members[f].parent
                                 families.family.members.add(member)
 
-                                if ((member.parent == "Pai") || (member.parent == "Mae")){
-                                    ver[flag] = 2
-                                } 
-                                else if ((member.parent == "Filho")) {
-                                    ver[flag] = 1
-                                }  
-                                flag++
 
-                                for( int l =0; l < flag ; l++) {
-                                    if ((ver[l] == 1) && ((member.firstName == "") || (member.firstName == null))) {
-                                        logs.log_error("O primeiro nome é invalido da familia ${i}")
-                                    }
-                                    else if ((member.lastName == "") || (member.lastName == null)) {
-                                        logs.log_error("O último nome é invalido da familia ${i}")
-                                    } 
-                                    else if ((member.job == "") || (member.job == null)) {
-                                        logs.log_error("O trabalho é invalido da familia ${i}")
-                                    } 
-                                    else if ((member.age <= 0) || (member.age == null)) {
-                                        logs.log_error("A idade é invalido da familia ${i}")
-                                    }
-                                    else {  
-                                        //"Olá, o meu nome é X, tenho Z anos e vim da cidade Y. A minha profissão é K."                       
-                                        logs.log_succeed("Olá, o meu nome é ${member.firstName} ${member.lastName} e tenho ${member.age} anos. A minha profissão é ${member.job}.")
-                                    }
+                                if((member.parent == "Pai") && ((member.firstName == "") || (member.firstName == null) || (member.lastName == "") || (member.lastName == null)
+                                || (member.job == "") || (member.job == null) || (member.age <= 0) || (member.age == null))){
+                                    flag = 1
+                                } 
+                                else if((member.parent == "Mae") && ((member.firstName == "") || (member.firstName == null) || (member.lastName == "") || (member.lastName == null)
+                                || (member.job == "") || (member.job == null) || (member.age <= 0) || (member.age == null))){
+                                    flag = 1
+                                }
+                                if ((member.parent == "Filho") && (flag == 1)) {
+                                    flag = 0 
+                                    echo "O filho tb deu erro"
+                                    break
+                                }
+
+                            
+                                if ((member.firstName == "") || (member.firstName == null)) {
+                                    logs.log_error("O primeiro nome é invalido da familia ${i}")
+                                }
+                                else if ((member.lastName == "") || (member.lastName == null)) {
+                                    logs.log_error("O último nome é invalido da familia ${i}")
+                                } 
+                                else if ((member.job == "") || (member.job == null)) {
+                                    logs.log_error("O trabalho é invalido da familia ${i}")
+                                } 
+                                else if ((member.age <= 0) || (member.age == null)) {
+                                    logs.log_error("A idade é invalido da familia ${i}")
+                                }
+                                else {  
+                                    //"Olá, o meu nome é X, tenho Z anos e vim da cidade Y. A minha profissão é K."                       
+                                    logs.log_succeed("Olá, o meu nome é ${member.firstName} ${member.lastName} e tenho ${member.age} anos. A minha profissão é ${member.job}.")
                                 }
                             }
                         }      
